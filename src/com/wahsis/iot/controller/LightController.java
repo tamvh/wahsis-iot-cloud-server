@@ -158,7 +158,7 @@ public class LightController extends HttpServlet {
                         brightness = 0;
                     } else {
                         if (brightness == 0) {
-                            brightness = 100;
+                            brightness = 50;
                         }
                     }
                     MsgChangeStateGroup changeStateGroup = new MsgChangeStateGroup(area_id, brightness);
