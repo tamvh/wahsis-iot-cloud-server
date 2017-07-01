@@ -25,8 +25,8 @@ public class AreaModel {
     private static AreaModel _instance = null;
     private static final Lock createLock_ = new ReentrantLock();
     protected final Logger logger = Logger.getLogger(this.getClass());
-    
-     public static AreaModel getInstance()  {
+    private int AREA_ACTIVE = 1;
+    public static AreaModel getInstance()  {
         if (_instance == null) {
             createLock_.lock();
             try {
@@ -49,7 +49,7 @@ public class AreaModel {
         return tableName;
     }
     
-    public int getBrightnessGroup(int area_id) {
+    public int getBrightnessArea(int area_id) {
         Connection connection = null;
         Statement stmt = null;
         ResultSet rs = null;
@@ -62,7 +62,10 @@ public class AreaModel {
             String tableName = getAreaTableName();
             String queryStr;
             
-            queryStr = String.format("SELECT `area_brightness` FROM %s WHERE `area_id` = %d", tableName, area_id);
+            queryStr = String.format("SELECT `area_brightness` FROM %s WHERE `area_id` = %d AND `active` = %d", 
+                    tableName, 
+                    area_id, 
+                    AREA_ACTIVE);
             stmt.execute(queryStr);
             rs = stmt.getResultSet();
              if (rs != null) {
