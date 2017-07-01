@@ -136,7 +136,7 @@ public class AddLogTask implements Runnable {
                         String postData = _gson.toJson(jsonData);
                         
                         LightController controller = new LightController();
-                        controller.updateOnOffGroup(postData);
+                        controller.updateOnOffArea(postData);
                     }
                     else if (msg.type == MSG_QUIT) { 
                         break;

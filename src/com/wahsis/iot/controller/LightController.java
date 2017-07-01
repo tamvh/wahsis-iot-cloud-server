@@ -161,26 +161,28 @@ public class LightController extends HttpServlet {
                             brightness = 50;
                         }
                     }
+                    //-----public msg to mqtt chanel-----
                     MsgChangeStateGroup changeStateGroup = new MsgChangeStateGroup(area_id, brightness);
                     mqttMsg.setMsgData(changeStateGroup);
                     mqttMsg.setErrCode(0);
                     mqttMsg.setMsg("");
-                    //mqttMsg.setMsgId(2);
                     mqttMsg.setMsgId(4);
 
                     List<Gateway> listGateway = GatewayModel.getInstance().getGatewayList();
 
                     for (Gateway gateway : listGateway) {
-                        TopicInfo topic = new TopicInfo("vng-cloud", gateway.getGateway_code(), "switch_on_off", "request");
+                        TopicInfo topic = new TopicInfo("wahsis-cloud", gateway.getGateway_code(), "switch_on_off", "request");
                         MqttManager.getInstance().publish(topic, mqttMsg);
                     }
-                    content = CommonModel.FormatResponse(0, "", "brightness", brightness);
+                    
                     Map mapdata = new HashMap();
                     mapdata.put("area_id", area_id);
                     mapdata.put("brightness", brightness);
                     mapdata.put("on_off", on_off);
                     AddLogTask.getInstance().addSwitchLightGroupMessage(mapdata);
-
+                    //----- end public msg to mqtt chanel-----
+                    
+                    content = CommonModel.FormatResponse(0, "", "brightness", brightness);
                 } else {
                     content = CommonModel.FormatResponse(-1, "");
                 }
@@ -422,7 +424,7 @@ public class LightController extends HttpServlet {
         return content;
     }
 
-    public String updateOnOffGroup(String data) {
+    public String updateOnOffArea(String data) {
 
         String content;
         int ret = -1;
@@ -437,7 +439,6 @@ public class LightController extends HttpServlet {
                 int onOff = jsonObject.get("on_off").getAsInt();
                 int brightness = jsonObject.get("brightness").getAsInt();
                 ret = LightModel.getInstance().updateOnOffAllLightByAreaID(area_id, onOff);
-                //AreaModel.getInstance().updateAreaBrightness(area_id, brightness);
                 content = CommonModel.FormatResponse(ret, "");
 
                 JsonObject jsonMain = new JsonObject();
