@@ -85,8 +85,8 @@ public class LightController extends HttpServlet {
             case "change_brightness_group":
                 content = changeBrightnessGroup(data);
                 break;
-            case "switch_on_off_group":
-                content = switchOnOffGroup(data);
+            case "switch_on_off_area":
+                content = switchOnOffArea(data);
                 break;
             case "update":
                 break;
@@ -138,7 +138,7 @@ public class LightController extends HttpServlet {
         return content;
     }
 
-    public String switchOnOffGroup(String data) {
+    public String switchOnOffArea(String data) {
 
         String content;
         int ret = -1;
@@ -150,11 +150,10 @@ public class LightController extends HttpServlet {
             } else {
                 int area_id = jsonObject.get("area_id").getAsInt();
                 int on_off = jsonObject.get("on_off").getAsInt();
-                int brightness = AreaModel.getInstance().getBrightnessGroup(area_id);
+                int brightness = AreaModel.getInstance().getBrightnessArea(area_id);
 
                 if (brightness >= 0) {
                     IMqttMessage<MsgChangeStateGroup> mqttMsg = new IMqttMessage<>();
-                    //MsgChangeState changeState = new MsgChangeState(light.getLight_code(), light.getOn_off());
                     if (on_off == 0) {
                         brightness = 0;
                     } else {
@@ -263,6 +262,7 @@ public class LightController extends HttpServlet {
                 Light light = new Light();
                 light = _gson.fromJson(jsonObject.get("light").getAsJsonObject(), Light.class);
 
+                //-----public msg to mqtt chanel-----
                 IMqttMessage<MsgChangeState> mqttMsg = new IMqttMessage<>();
                 MsgChangeState changeState = new MsgChangeState(light.getLight_code(), light.getBrightness());
                 mqttMsg.setMsgData(changeState);
@@ -273,9 +273,10 @@ public class LightController extends HttpServlet {
                 List<Gateway> listGateway = GatewayModel.getInstance().getGatewayList();
 
                 for (Gateway gateway : listGateway) {
-                    TopicInfo topic = new TopicInfo("vng-cloud", gateway.getGateway_code(), "switch_on_off", "request");
+                    TopicInfo topic = new TopicInfo("wahsis-cloud", gateway.getGateway_code(), "switch_on_off", "request");
                     MqttManager.getInstance().publish(topic, mqttMsg);
                 }
+                //----- end public msg to mqtt chanel-----
 
                 content = CommonModel.FormatResponse(0, "", "light", light);
 
