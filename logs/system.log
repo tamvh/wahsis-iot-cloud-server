@@ -160,3 +160,401 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 2017-07-01 10:45:45  INFO ServerConnector:266 - Started ServerConnector@1f4e0f6d{HTTP/1.1}{0.0.0.0:9103}
 2017-07-01 10:45:45  INFO ServerConnector:266 - Started ServerConnector@4dd97c40{HTTP/1.1}{0.0.0.0:9104}
 2017-07-01 10:45:45  INFO Server:350 - Started @4233ms
+2017-07-21 01:27:33  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:28:40  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:29:54  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:29:55  INFO local:839 - local: Created a new connection
+2017-07-21 01:29:55  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:29:55  INFO local:839 - local: Created a new connection
+2017-07-21 01:29:55  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:29:55  INFO local:839 - local: Created a new connection
+2017-07-21 01:29:55  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:29:55  INFO local:839 - local: Created a new connection
+2017-07-21 01:29:55  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:29:55  INFO local:839 - local: Created a new connection
+2017-07-21 01:29:55  INFO log:178 - Logging initialized @1733ms
+2017-07-21 01:29:55  INFO WebServer:71 - Start server...
+2017-07-21 01:29:55  WARN ContextHandler:1324 - o.e.j.s.h.ContextHandler@7152788f{/,null,null} contextPath ends with /*
+2017-07-21 01:29:55  INFO Server:301 - jetty-9.1.5.v20140505
+2017-07-21 01:29:56  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@3b38417a{/static,null,AVAILABLE}
+2017-07-21 01:29:56  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@7152788f{/cloud/ntf,null,AVAILABLE}
+2017-07-21 01:29:56  INFO ContextHandler:747 - Started o.e.j.s.ServletContextHandler@6c209c50{/,null,AVAILABLE}
+2017-07-21 01:29:56  INFO ServerConnector:266 - Started ServerConnector@47c7f977{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 01:29:56  INFO ServerConnector:266 - Started ServerConnector@7d894a9d{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 01:29:56  INFO Server:350 - Started @2606ms
+2017-07-21 01:32:55  INFO local:839 - local: Destroyed connection
+2017-07-21 01:32:55  INFO local:839 - local: Destroyed connection
+2017-07-21 01:32:55  INFO local:839 - local: Destroyed connection
+2017-07-21 01:32:55  INFO local:839 - local: Destroyed connection
+2017-07-21 01:32:55  INFO local:839 - local: Destroyed connection
+2017-07-21 01:33:25  INFO ServiceDaemon:35 - Shutdown thread before webserver getinstance
+2017-07-21 01:33:25  INFO ServerConnector:303 - Stopped ServerConnector@47c7f977{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 01:33:25  INFO ServerConnector:303 - Stopped ServerConnector@7d894a9d{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 01:33:25  INFO ContextHandler:864 - Stopped o.e.j.s.ServletContextHandler@6c209c50{/,null,UNAVAILABLE}
+2017-07-21 01:33:25  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@7152788f{/cloud/ntf,null,UNAVAILABLE}
+2017-07-21 01:33:25  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@3b38417a{/static,null,UNAVAILABLE}
+2017-07-21 01:33:42  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:33:43  INFO local:839 - local: Created a new connection
+2017-07-21 01:33:43  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 01:33:43  INFO pos_live_pool:848 - pos_live_pool: Can't create a new connection for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+java.sql.SQLException: No suitable driver found for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:256)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:71)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:377)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:429)
+	at snaq.db.ConnectionPool.getConnection(ConnectionPool.java:425)
+	at com.wahsis.iot.database.MsSqlFactory.getConnection(MsSqlFactory.java:39)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:67)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:108)
+	at com.wahsis.iot.main.ServiceDaemon.main(ServiceDaemon.java:26)
+2017-07-21 01:33:43 ERROR MsSqlFactory:41 - getConnection : No suitable driver found for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 01:33:43  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:33:43  INFO local:839 - local: Created a new connection
+2017-07-21 01:33:43  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:33:43  INFO local:839 - local: Created a new connection
+2017-07-21 01:33:43  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:33:43  INFO local:839 - local: Created a new connection
+2017-07-21 01:33:43  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:33:43  INFO local:839 - local: Created a new connection
+2017-07-21 01:33:43  INFO log:178 - Logging initialized @1702ms
+2017-07-21 01:33:43  INFO WebServer:71 - Start server...
+2017-07-21 01:33:43  WARN ContextHandler:1324 - o.e.j.s.h.ContextHandler@6734c7c1{/,null,null} contextPath ends with /*
+2017-07-21 01:33:44  INFO Server:301 - jetty-9.1.5.v20140505
+2017-07-21 01:33:44  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@70220677{/static,null,AVAILABLE}
+2017-07-21 01:33:44  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@6734c7c1{/cloud/ntf,null,AVAILABLE}
+2017-07-21 01:33:44  INFO ContextHandler:747 - Started o.e.j.s.ServletContextHandler@1275b184{/,null,AVAILABLE}
+2017-07-21 01:33:44  INFO ServerConnector:266 - Started ServerConnector@7a3895a5{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 01:33:44  INFO ServerConnector:266 - Started ServerConnector@79b49116{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 01:33:44  INFO Server:350 - Started @2522ms
+2017-07-21 01:34:08  INFO ServiceDaemon:35 - Shutdown thread before webserver getinstance
+2017-07-21 01:34:08  INFO ServerConnector:303 - Stopped ServerConnector@7a3895a5{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 01:34:08  INFO ServerConnector:303 - Stopped ServerConnector@79b49116{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 01:34:08  INFO ContextHandler:864 - Stopped o.e.j.s.ServletContextHandler@1275b184{/,null,UNAVAILABLE}
+2017-07-21 01:34:08  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@6734c7c1{/cloud/ntf,null,UNAVAILABLE}
+2017-07-21 01:34:08  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@70220677{/static,null,UNAVAILABLE}
+2017-07-21 01:34:14  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:34:15  INFO local:839 - local: Created a new connection
+2017-07-21 01:34:15  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 01:34:15  INFO pos_live_pool:848 - pos_live_pool: Can't create a new connection for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+java.sql.SQLException: No suitable driver found for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:256)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:71)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:377)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:429)
+	at snaq.db.ConnectionPool.getConnection(ConnectionPool.java:425)
+	at com.wahsis.iot.database.MsSqlFactory.getConnection(MsSqlFactory.java:39)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:67)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:108)
+	at com.wahsis.iot.main.ServiceDaemon.main(ServiceDaemon.java:26)
+2017-07-21 01:34:15 ERROR MsSqlFactory:41 - getConnection : No suitable driver found for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 01:34:15  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:34:15  INFO local:839 - local: Created a new connection
+2017-07-21 01:34:15  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:34:15  INFO local:839 - local: Created a new connection
+2017-07-21 01:34:15  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:34:15  INFO local:839 - local: Created a new connection
+2017-07-21 01:34:15  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 01:34:15  INFO local:839 - local: Created a new connection
+2017-07-21 01:34:15  INFO log:178 - Logging initialized @1573ms
+2017-07-21 01:34:15  INFO WebServer:71 - Start server...
+2017-07-21 01:34:15  WARN ContextHandler:1324 - o.e.j.s.h.ContextHandler@6734c7c1{/,null,null} contextPath ends with /*
+2017-07-21 01:34:16  INFO Server:301 - jetty-9.1.5.v20140505
+2017-07-21 01:34:16  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@70220677{/static,null,AVAILABLE}
+2017-07-21 01:34:16  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@6734c7c1{/cloud/ntf,null,AVAILABLE}
+2017-07-21 01:34:16  INFO ContextHandler:747 - Started o.e.j.s.ServletContextHandler@1275b184{/,null,AVAILABLE}
+2017-07-21 01:34:16  INFO ServerConnector:266 - Started ServerConnector@37c64f42{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 01:34:16  INFO ServerConnector:266 - Started ServerConnector@79b49116{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 01:34:16  INFO Server:350 - Started @2527ms
+2017-07-21 01:34:32  INFO ServiceDaemon:35 - Shutdown thread before webserver getinstance
+2017-07-21 01:34:32  INFO ServerConnector:303 - Stopped ServerConnector@37c64f42{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 01:34:32  INFO ServerConnector:303 - Stopped ServerConnector@79b49116{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 01:34:32  INFO ContextHandler:864 - Stopped o.e.j.s.ServletContextHandler@1275b184{/,null,UNAVAILABLE}
+2017-07-21 01:34:32  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@6734c7c1{/cloud/ntf,null,UNAVAILABLE}
+2017-07-21 01:34:32  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@70220677{/static,null,UNAVAILABLE}
+2017-07-21 21:21:26  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:21:27  INFO local:839 - local: Created a new connection
+2017-07-21 21:22:27  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:22:27  INFO pos_live_pool:848 - pos_live_pool: Can't create a new connection for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+java.sql.SQLException: No suitable driver found for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:256)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:71)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:377)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:429)
+	at snaq.db.ConnectionPool.getConnection(ConnectionPool.java:425)
+	at com.wahsis.iot.database.MsSqlFactory.getConnection(MsSqlFactory.java:39)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:67)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:108)
+	at com.wahsis.iot.main.ServiceDaemon.main(ServiceDaemon.java:26)
+2017-07-21 21:26:32  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:26:32  INFO local:839 - local: Created a new connection
+2017-07-21 21:26:32  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:26:32  INFO pos_live_pool:848 - pos_live_pool: Can't create a new connection for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+java.sql.SQLException: No suitable driver found for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:256)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:71)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:377)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:429)
+	at snaq.db.ConnectionPool.getConnection(ConnectionPool.java:425)
+	at com.wahsis.iot.database.MsSqlFactory.getConnection(MsSqlFactory.java:39)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:67)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:108)
+	at com.wahsis.iot.main.ServiceDaemon.main(ServiceDaemon.java:26)
+2017-07-21 21:26:32 ERROR MsSqlFactory:41 - getConnection : No suitable driver found for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:26:32  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:26:32  INFO local:839 - local: Created a new connection
+2017-07-21 21:26:32  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:26:32  INFO local:839 - local: Created a new connection
+2017-07-21 21:26:32  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:26:32  INFO local:839 - local: Created a new connection
+2017-07-21 21:26:32  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:26:32  INFO local:839 - local: Created a new connection
+2017-07-21 21:26:32  INFO log:178 - Logging initialized @1538ms
+2017-07-21 21:26:33  INFO WebServer:71 - Start server...
+2017-07-21 21:26:33  WARN ContextHandler:1324 - o.e.j.s.h.ContextHandler@6734c7c1{/,null,null} contextPath ends with /*
+2017-07-21 21:26:33  INFO Server:301 - jetty-9.1.5.v20140505
+2017-07-21 21:26:33  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@70220677{/static,null,AVAILABLE}
+2017-07-21 21:26:33  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@6734c7c1{/cloud/ntf,null,AVAILABLE}
+2017-07-21 21:26:33  INFO ContextHandler:747 - Started o.e.j.s.ServletContextHandler@1275b184{/,null,AVAILABLE}
+2017-07-21 21:26:33  INFO ServerConnector:266 - Started ServerConnector@79b49116{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 21:26:33  INFO ServerConnector:266 - Started ServerConnector@1d3c1e91{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 21:26:33  INFO Server:350 - Started @2090ms
+2017-07-21 21:29:32  INFO local:839 - local: Destroyed connection
+2017-07-21 21:29:32  INFO local:839 - local: Destroyed connection
+2017-07-21 21:29:32  INFO local:839 - local: Destroyed connection
+2017-07-21 21:29:32  INFO local:839 - local: Destroyed connection
+2017-07-21 21:29:32  INFO local:839 - local: Destroyed connection
+2017-07-21 21:43:00  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:43:02  INFO local:839 - local: Created a new connection
+2017-07-21 21:43:02  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:43:05  INFO ServiceDaemon:35 - Shutdown thread before webserver getinstance
+2017-07-21 21:43:05  INFO ServerConnector:303 - Stopped ServerConnector@79b49116{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 21:43:05  INFO ServerConnector:303 - Stopped ServerConnector@1d3c1e91{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 21:43:05  INFO ContextHandler:864 - Stopped o.e.j.s.ServletContextHandler@1275b184{/,null,UNAVAILABLE}
+2017-07-21 21:43:05  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@6734c7c1{/cloud/ntf,null,UNAVAILABLE}
+2017-07-21 21:43:05  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@70220677{/static,null,UNAVAILABLE}
+2017-07-21 21:43:20  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:43:21  INFO local:839 - local: Created a new connection
+2017-07-21 21:43:21  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:43:37  INFO pos_live_pool:848 - pos_live_pool: Can't create a new connection for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 10.9.11.11, port 1433 has failed. Error: "connect timed out. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:190)
+	at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:241)
+	at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2243)
+	at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:491)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:1309)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:991)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:827)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1012)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:256)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:71)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:377)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:429)
+	at snaq.db.ConnectionPool.getConnection(ConnectionPool.java:425)
+	at com.wahsis.iot.database.MsSqlFactory.getConnection(MsSqlFactory.java:39)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:67)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:108)
+	at com.wahsis.iot.main.ServiceDaemon.main(ServiceDaemon.java:26)
+2017-07-21 21:43:37 ERROR MsSqlFactory:41 - getConnection : The TCP/IP connection to the host 10.9.11.11, port 1433 has failed. Error: "connect timed out. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+2017-07-21 21:43:37  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:43:37  INFO local:839 - local: Created a new connection
+2017-07-21 21:43:37  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:43:37  INFO local:839 - local: Created a new connection
+2017-07-21 21:43:37  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:43:37  INFO local:839 - local: Created a new connection
+2017-07-21 21:43:37  INFO log:178 - Logging initialized @17385ms
+2017-07-21 21:43:37  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:43:37  INFO local:839 - local: Created a new connection
+2017-07-21 21:43:37  INFO WebServer:71 - Start server...
+2017-07-21 21:43:37  WARN ContextHandler:1324 - o.e.j.s.h.ContextHandler@39a755a4{/,null,null} contextPath ends with /*
+2017-07-21 21:43:37  INFO Server:301 - jetty-9.1.5.v20140505
+2017-07-21 21:43:37  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@a2875b2{/static,null,AVAILABLE}
+2017-07-21 21:43:37  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@39a755a4{/cloud/ntf,null,AVAILABLE}
+2017-07-21 21:43:37  INFO ContextHandler:747 - Started o.e.j.s.ServletContextHandler@4d71088d{/,null,AVAILABLE}
+2017-07-21 21:43:37  INFO ServerConnector:266 - Started ServerConnector@5dd78568{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 21:43:37  INFO ServerConnector:266 - Started ServerConnector@5d6a30ec{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 21:43:37  INFO Server:350 - Started @17717ms
+2017-07-21 21:44:01  INFO ServiceDaemon:35 - Shutdown thread before webserver getinstance
+2017-07-21 21:44:02  INFO ServerConnector:303 - Stopped ServerConnector@5dd78568{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 21:44:02  INFO ServerConnector:303 - Stopped ServerConnector@5d6a30ec{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 21:44:02  INFO ContextHandler:864 - Stopped o.e.j.s.ServletContextHandler@4d71088d{/,null,UNAVAILABLE}
+2017-07-21 21:44:02  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@39a755a4{/cloud/ntf,null,UNAVAILABLE}
+2017-07-21 21:44:02  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@a2875b2{/static,null,UNAVAILABLE}
+2017-07-21 21:44:06  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:44:07  INFO local:839 - local: Created a new connection
+2017-07-21 21:44:07  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:44:13  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 21:44:13  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:44:13  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:44:13  INFO local:839 - local: Created a new connection
+2017-07-21 21:44:13  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:44:13  INFO local:839 - local: Created a new connection
+2017-07-21 21:44:13  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:44:13  INFO log:178 - Logging initialized @8844ms
+2017-07-21 21:44:13  INFO local:839 - local: Created a new connection
+2017-07-21 21:44:13  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:44:13  INFO local:839 - local: Created a new connection
+2017-07-21 21:44:13  INFO WebServer:71 - Start server...
+2017-07-21 21:44:13  WARN ContextHandler:1324 - o.e.j.s.h.ContextHandler@5487f2b8{/,null,null} contextPath ends with /*
+2017-07-21 21:44:13  INFO Server:301 - jetty-9.1.5.v20140505
+2017-07-21 21:44:13  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@79a7c313{/static,null,AVAILABLE}
+2017-07-21 21:44:13  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@5487f2b8{/cloud/ntf,null,AVAILABLE}
+2017-07-21 21:44:13  INFO ContextHandler:747 - Started o.e.j.s.ServletContextHandler@ad8fa6c{/,null,AVAILABLE}
+2017-07-21 21:44:13  INFO ServerConnector:266 - Started ServerConnector@7dfc108f{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 21:44:13  INFO ServerConnector:266 - Started ServerConnector@24bd3d82{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 21:44:13  INFO Server:350 - Started @9068ms
+2017-07-21 21:44:18  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 21:44:18  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:44:23  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 21:44:23  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:44:28  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 21:44:28  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:44:33  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 21:44:33  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:44:38  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 21:47:13  INFO local:839 - local: Destroyed connection
+2017-07-21 21:47:13  INFO local:839 - local: Destroyed connection
+2017-07-21 21:47:13  INFO local:839 - local: Destroyed connection
+2017-07-21 21:47:13  INFO local:839 - local: Destroyed connection
+2017-07-21 21:47:13  INFO local:839 - local: Destroyed connection
+2017-07-21 21:47:19  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-21 21:47:24  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-21 21:47:29  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-21 21:47:34  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-21 21:47:39  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-21 21:48:41  INFO local:839 - local: Getting connection (user/password): jdbc:mysql://127.0.0.1:3306/wahsis?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&characterEncoding=UTF-8&noAccessToProcedureBodies=true
+2017-07-21 21:48:43  INFO local:839 - local: Created a new connection
+2017-07-21 21:51:54  INFO ServiceDaemon:35 - Shutdown thread before webserver getinstance
+2017-07-21 21:51:54  INFO ServerConnector:303 - Stopped ServerConnector@7dfc108f{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 21:51:54  INFO ServerConnector:303 - Stopped ServerConnector@24bd3d82{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 21:51:54  INFO ContextHandler:864 - Stopped o.e.j.s.ServletContextHandler@ad8fa6c{/,null,UNAVAILABLE}
+2017-07-21 21:51:54  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@5487f2b8{/cloud/ntf,null,UNAVAILABLE}
+2017-07-21 21:51:54  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@79a7c313{/static,null,UNAVAILABLE}
+2017-07-21 21:55:08  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 21:55:22  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 22:03:37  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 22:03:53  INFO pos_live_pool:848 - pos_live_pool: Can't create a new connection for jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host 10.9.11.11, port 1433 has failed. Error: "connect timed out. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:190)
+	at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:241)
+	at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2243)
+	at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:491)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:1309)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:991)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:827)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1012)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:256)
+	at snaq.db.ConnectionPool.create(ConnectionPool.java:71)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:377)
+	at snaq.util.ObjectPool.checkOut(ObjectPool.java:429)
+	at snaq.db.ConnectionPool.getConnection(ConnectionPool.java:425)
+	at com.wahsis.iot.database.MsSqlFactory.getConnection(MsSqlFactory.java:39)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:66)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:106)
+	at com.wahsis.iot.main.ServiceDaemon.main(ServiceDaemon.java:26)
+2017-07-21 22:03:53 ERROR MsSqlFactory:41 - getConnection : The TCP/IP connection to the host 10.9.11.11, port 1433 has failed. Error: "connect timed out. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+2017-07-21 22:04:15  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 22:04:29  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 22:04:43 ERROR LightModel:95 - LightModel.loadLight: null
+java.lang.NullPointerException
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:74)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:106)
+	at com.wahsis.iot.main.ServiceDaemon.main(ServiceDaemon.java:26)
+2017-07-21 22:14:01  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 22:14:16  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 22:15:25 ERROR LightModel:96 - LightModel.loadLight: Invalid object name 'room_area_light'.
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name 'room_area_light'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:216)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1515)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:404)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:350)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:5696)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1715)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:180)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:155)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.executeQuery(SQLServerPreparedStatement.java:285)
+	at snaq.db.CachedPreparedStatement.executeQuery(CachedPreparedStatement.java:144)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:76)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:107)
+	at com.wahsis.iot.main.ServiceDaemon.main(ServiceDaemon.java:26)
+2017-07-21 22:15:25  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 22:15:25  INFO log:178 - Logging initialized @88278ms
+2017-07-21 22:15:25  INFO WebServer:71 - Start server...
+2017-07-21 22:15:25  WARN ContextHandler:1324 - o.e.j.s.h.ContextHandler@59cb6de7{/,null,null} contextPath ends with /*
+2017-07-21 22:15:25  INFO Server:301 - jetty-9.1.5.v20140505
+2017-07-21 22:15:25  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@d733a33{/static,null,AVAILABLE}
+2017-07-21 22:15:25  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@59cb6de7{/cloud/ntf,null,AVAILABLE}
+2017-07-21 22:15:25  INFO ContextHandler:747 - Started o.e.j.s.ServletContextHandler@368aa53d{/,null,AVAILABLE}
+2017-07-21 22:15:26  INFO ServerConnector:266 - Started ServerConnector@27da5ca9{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 22:15:26  INFO ServerConnector:266 - Started ServerConnector@21485709{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 22:15:26  INFO Server:350 - Started @89132ms
+2017-07-21 22:15:30  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 22:15:30  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 22:15:35  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 22:15:35  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 22:15:40  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 22:15:40  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-21 22:15:45  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-21 22:18:25  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-21 22:18:30  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-21 22:18:35  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-21 22:18:40  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-21 22:18:45  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-21 22:27:19  INFO ServiceDaemon:35 - Shutdown thread before webserver getinstance
+2017-07-21 22:27:19  INFO ServerConnector:303 - Stopped ServerConnector@27da5ca9{HTTP/1.1}{0.0.0.0:8021}
+2017-07-21 22:27:19  INFO ServerConnector:303 - Stopped ServerConnector@21485709{HTTP/1.1}{0.0.0.0:9021}
+2017-07-21 22:27:19  INFO ContextHandler:864 - Stopped o.e.j.s.ServletContextHandler@368aa53d{/,null,UNAVAILABLE}
+2017-07-21 22:27:19  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@59cb6de7{/cloud/ntf,null,UNAVAILABLE}
+2017-07-21 22:27:19  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@d733a33{/static,null,UNAVAILABLE}
+2017-07-22 08:45:06  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-22 08:45:12  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-22 08:45:12 ERROR LightModel:96 - LightModel.loadLight: Invalid object name 'room_area_light'.
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name 'room_area_light'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:216)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1515)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:404)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:350)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:5696)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1715)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:180)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:155)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.executeQuery(SQLServerPreparedStatement.java:285)
+	at snaq.db.CachedPreparedStatement.executeQuery(CachedPreparedStatement.java:144)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:76)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:107)
+	at com.wahsis.iot.main.ServiceDaemon.main(ServiceDaemon.java:26)
+2017-07-22 08:45:12  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-22 08:45:12  INFO log:178 - Logging initialized @7732ms
+2017-07-22 08:45:12  INFO WebServer:71 - Start server...
+2017-07-22 08:45:13  WARN ContextHandler:1324 - o.e.j.s.h.ContextHandler@5dd14ad0{/,null,null} contextPath ends with /*
+2017-07-22 08:45:13  INFO Server:301 - jetty-9.1.5.v20140505
+2017-07-22 08:45:13  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@19f65e85{/static,null,AVAILABLE}
+2017-07-22 08:45:13  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@5dd14ad0{/cloud/ntf,null,AVAILABLE}
+2017-07-22 08:45:13  INFO ContextHandler:747 - Started o.e.j.s.ServletContextHandler@1b9116c0{/,null,AVAILABLE}
+2017-07-22 08:45:13  INFO ServerConnector:266 - Started ServerConnector@65767c69{HTTP/1.1}{0.0.0.0:8021}
+2017-07-22 08:45:13  INFO ServerConnector:266 - Started ServerConnector@7eff3a1{HTTP/1.1}{0.0.0.0:9021}
+2017-07-22 08:45:13  INFO Server:350 - Started @8317ms
+2017-07-22 08:45:17  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-22 08:45:17  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-22 08:45:22  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-22 08:45:22  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-22 08:45:27  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-22 08:45:28  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-22 08:45:33  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-22 08:45:36  INFO ServiceDaemon:35 - Shutdown thread before webserver getinstance
+2017-07-22 08:45:36  INFO ServerConnector:303 - Stopped ServerConnector@65767c69{HTTP/1.1}{0.0.0.0:8021}
+2017-07-22 08:45:36  INFO ServerConnector:303 - Stopped ServerConnector@7eff3a1{HTTP/1.1}{0.0.0.0:9021}
+2017-07-22 08:45:36  INFO ContextHandler:864 - Stopped o.e.j.s.ServletContextHandler@1b9116c0{/,null,UNAVAILABLE}
+2017-07-22 08:45:36  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@5dd14ad0{/cloud/ntf,null,UNAVAILABLE}
+2017-07-22 08:45:36  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@19f65e85{/static,null,UNAVAILABLE}

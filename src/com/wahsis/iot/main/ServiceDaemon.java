@@ -6,14 +6,7 @@
 package com.wahsis.iot.main;
 
 import com.wahsis.iot.common.Config;
-import com.wahsis.iot.mqtt.MqttManager;
-import com.wahsis.iot.model.EmployeeTagModel;
-import com.wahsis.iot.model.DeviceModel;
-import com.wahsis.iot.model.DoorModel;
-import com.wahsis.iot.model.GatewayModel;
 import com.wahsis.iot.model.LightModel;
-import com.wahsis.iot.model.ReaderModel;
-import com.wahsis.iot.model.TagModel;
 import com.wahsis.iot.task.AddLogTask;
 import org.apache.log4j.Logger;
 
@@ -30,13 +23,7 @@ public class ServiceDaemon {
     public static void main(String[] args) {
         try {
             Config.init(DEFAULT_CONFIGURATION_FILE);
-            EmployeeTagModel.getInstance().loadData();
-            GatewayModel.getInstance().loadGateway();
-            ReaderModel.getInstance().loadReader();
-            DoorModel.getInstance().loadDoor();
             LightModel.getInstance().loadLight();
-            TagModel.getInstance().loadTag();
-            MqttManager.getInstance().start();
             webServer = WebServer.getInstance();
             new Thread(webServer).start();
             AddLogTask.getInstance().start();
@@ -48,7 +35,6 @@ public class ServiceDaemon {
                         logger.info("Shutdown thread before webserver getinstance");
                         if (webServer != null) {
                             webServer.stop();
-                            MqttManager.getInstance().stop();
                             AddLogTask.getInstance().stop();
                         }
                     } catch (Exception e) {

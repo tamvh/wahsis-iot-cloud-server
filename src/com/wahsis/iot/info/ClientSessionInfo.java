@@ -14,7 +14,6 @@ import org.eclipse.jetty.websocket.api.Session;
 public class ClientSessionInfo {
     
     private Session _session = null;
-    private String  _userName = "";
     private String  _sessionId = "";
     
     public ClientSessionInfo(Session session, String sessionId) {
@@ -22,11 +21,6 @@ public class ClientSessionInfo {
         _sessionId = sessionId;
     }
     
-    public ClientSessionInfo(Session session, String userName, String sessionId) {
-        _session = session;
-        _userName = userName;
-        _sessionId = sessionId;
-    }
 
     public Session getSession() {
         return _session;
@@ -42,13 +36,5 @@ public class ClientSessionInfo {
 
     public void setSessionId(String sessionId) {
         this._sessionId = sessionId;
-    }
-    
-     public String getUserName() {
-        return _userName;
-    }
-
-    public void setUserName(String userName) {
-        this._userName = userName;
-    }
+    }    
 }

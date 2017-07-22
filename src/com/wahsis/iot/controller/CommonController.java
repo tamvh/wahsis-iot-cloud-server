@@ -8,12 +8,7 @@ package com.wahsis.iot.controller;
 import com.wahsis.iot.common.CommonModel;
 import com.wahsis.iot.common.JsonParserUtil;
 import com.wahsis.iot.common.AppConst;
-import com.wahsis.iot.model.DeviceModel;
-import com.wahsis.iot.model.GatewayModel;
-import com.wahsis.iot.model.ReaderModel;
-import com.wahsis.iot.model.DoorModel;
 import com.wahsis.iot.model.LightModel;
-import com.wahsis.iot.model.TagModel;
 import com.google.gson.JsonObject;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -27,7 +22,7 @@ import org.apache.log4j.Logger;
  * @author diepth
  */
 public class CommonController extends HttpServlet {
-    protected static final Logger logger = Logger.getLogger(IoTController.class);
+    protected static final Logger logger = Logger.getLogger(CommonController.class);
     
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -79,22 +74,9 @@ public class CommonController extends HttpServlet {
             } else {
                 int deviceType = jsonObject.get("device_type").getAsInt();
                 switch (deviceType) {
-                    case AppConst.DEVICE_GATEWAY:
-                        ret = GatewayModel.getInstance().reloadGateway();
-                        break;
-                    case AppConst.DEVICE_READER:
-                        ret = ReaderModel.getInstance().reloadReader();
-                        break;
-                    case AppConst.DEVICE_DOOR:
-                        ret = DoorModel.getInstance().reloadDoor();
-                        break;
                     case AppConst.DEVICE_LIGHT:
                         ret = LightModel.getInstance().reloadLight();
                         break;
-                    case AppConst.DEVICE_TAG:
-                        TagModel.getInstance().reloadTag();
-                        break;
-                        
                 }
                 content = CommonModel.FormatResponse(ret, "");
             }

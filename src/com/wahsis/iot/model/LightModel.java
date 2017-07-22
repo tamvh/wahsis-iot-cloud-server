@@ -8,8 +8,10 @@ package com.wahsis.iot.model;
 import com.wahsis.iot.common.DefinedName;
 import com.wahsis.iot.data.Light;
 import com.wahsis.iot.database.MySqlFactory;
+import com.wahsis.iot.database.MsSqlFactory;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -56,34 +58,32 @@ public class LightModel {
     
     public int loadLight(Map<String, Light> mapLight) {
         Connection connection = null;
-        Statement stmt = null;
         ResultSet rs = null;
+        PreparedStatement stmt = null;
         int ret = -1;
         
         try {            
-            connection = MySqlFactory.getConnection();
-            stmt = connection.createStatement();
-            String lightTableName =  getLightTableName();
+            connection = MsSqlFactory.getConnection();
+            String lightTableName =  "room_area_light";
             String queryStr;
             String deviceCode;
             Light light;
             
             // load light list
-            queryStr = String.format("SELECT `light_id`, `light_code`, `light_name`, `area_id`, `on_off` FROM %s", lightTableName);
-            stmt.execute(queryStr);
-            rs = stmt.getResultSet();
+            queryStr = String.format("SELECT * FROM %s", lightTableName);
+            
+            stmt = connection.prepareStatement(queryStr);
+            rs = stmt.executeQuery();
             
             if (rs != null) {
                 while (rs.next()) {
                     light = new Light();
-                    deviceCode = rs.getString("light_code");
-                    
+                    deviceCode = rs.getString("light_code");                    
                     light.setLight_id(rs.getLong("light_id"));
                     light.setLight_code(deviceCode);
                     light.setLight_name(rs.getString("light_name"));
                     light.setArea_id(rs.getLong("area_id"));
-                    light.setOn_off(rs.getInt("on_off"));
-                    
+                    light.setOn_off(rs.getInt("on_off"));                    
                     mapLight.put(deviceCode, light);
                 }
                 

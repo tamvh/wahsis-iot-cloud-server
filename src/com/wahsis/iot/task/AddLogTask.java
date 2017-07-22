@@ -6,15 +6,11 @@
 package com.wahsis.iot.task;
 
 import com.wahsis.iot.controller.LightController;
-import com.wahsis.iot.data.OpenDoorLog;
 import com.wahsis.iot.data.Light;
-import com.wahsis.iot.model.OpenDoorLogModel;
-import com.wahsis.iot.model.EmployeeModel;
 import com.wahsis.iot.common.MessageType;
 import com.wahsis.iot.controller.NotifyController;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -64,20 +60,7 @@ public class AddLogTask implements Runnable {
             try {
                 msg = msgQueue.take();
                 if (msg != null) {
-                    if (msg.type == MSG_ADD_OPEN_DOOR_LOG) {
-                        OpenDoorLog openDoorLog = OpenDoorLog.class.cast(msg.data);
-                        String employeeAccount = EmployeeModel.getInstance().getEmployeeAcoountFromId(openDoorLog.getEmployee_id());
-                        openDoorLog.setEmployee_account(employeeAccount);
-                        OpenDoorLogModel.getInstance().addOpenDoorLog(openDoorLog);
-                        
-                        //send message to updaet log on OPEN DOOR LOG PAGE
-                        JsonObject jsData = new JsonObject();
-                        jsData.addProperty("cmd", "update_open_door_list");
-                        jsData.addProperty("msg_type", MessageType.MSG_RELOAD_OPEN_DOOR_LOG_PAGE);
-                        String sendData = _gson.toJson(jsData);
-                        NotifyController.sendMessageToClient(sendData);  
-                        
-                    } else if (msg.type == MSG_ADD_SWITCH_LIGHT_LOG) { 
+                    if (msg.type == MSG_ADD_SWITCH_LIGHT_LOG) { 
                         
                         Light light = Light.class.cast(msg.data);
                         
@@ -166,12 +149,6 @@ public class AddLogTask implements Runnable {
             th.join();
         } catch (Exception e) {
         }
-    }
-    
-    public void addOpenDoorMessage(OpenDoorLog data) {
-        
-        AddLogMessage msg = new AddLogMessage(MSG_ADD_OPEN_DOOR_LOG, data);
-        msgQueue.offer(msg);
     }
     
     public void addSwitchLightMessage(Light data) {

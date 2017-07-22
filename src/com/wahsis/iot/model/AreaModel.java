@@ -4,29 +4,37 @@
  * and open the template in the editor.
  */
 package com.wahsis.iot.model;
-
+import com.wahsis.iot.common.AppConst;
 import com.wahsis.iot.common.DefinedName;
 import com.wahsis.iot.data.Area;
 import com.wahsis.iot.database.MySqlFactory;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import org.apache.log4j.Logger;
 
+
 /**
  *
- * @author sinhnd
+ * @author tamvh
  */
 public class AreaModel {
     
     private static AreaModel _instance = null;
     private static final Lock createLock_ = new ReentrantLock();
     protected final Logger logger = Logger.getLogger(this.getClass());
-    private int AREA_ACTIVE = 1;
-    public static AreaModel getInstance()  {
+    
+     public static AreaModel getInstance()  {
         if (_instance == null) {
             createLock_.lock();
             try {
@@ -49,7 +57,7 @@ public class AreaModel {
         return tableName;
     }
     
-    public int getBrightnessArea(int area_id) {
+    public int getBrightnessGroup(int area_id) {
         Connection connection = null;
         Statement stmt = null;
         ResultSet rs = null;
@@ -62,10 +70,7 @@ public class AreaModel {
             String tableName = getAreaTableName();
             String queryStr;
             
-            queryStr = String.format("SELECT `area_brightness` FROM %s WHERE `area_id` = %d AND `active` = %d", 
-                    tableName, 
-                    area_id, 
-                    AREA_ACTIVE);
+            queryStr = String.format("SELECT `area_brightness` FROM %s WHERE `area_id` = %d", tableName, area_id);
             stmt.execute(queryStr);
             rs = stmt.getResultSet();
              if (rs != null) {

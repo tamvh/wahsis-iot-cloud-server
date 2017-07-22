@@ -6,10 +6,8 @@
 package com.wahsis.iot.main;
 
 import com.wahsis.iot.common.Config;
-import com.wahsis.iot.controller.IoTController;
 import com.wahsis.iot.controller.CommonController;
 import com.wahsis.iot.controller.LightController;
-import com.wahsis.iot.controller.DoorController;
 import com.wahsis.iot.controller.NotifyController;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -73,11 +71,6 @@ public class WebServer implements Runnable{
             logger.info("Start server...");
             
             ServletHandler servletHandler = new ServletHandler();
-            
-//            servletHandler.addServletWithMapping(IoTController.class, "/cloud/api/iot/*");
-//            servletHandler.addServletWithMapping(CommonController.class, "/cloud/api/common/*");
-//            servletHandler.addServletWithMapping(LightController.class, "/cloud/api/light/*");
-//            servletHandler.addServletWithMapping(DoorController.class, "/cloud/api/door/*");
             servletHandler.addServletWithMapping(LightController.class, "/smart/api/light/*");
             
             ServletContextHandler servletContext = new ServletContextHandler(ServletContextHandler.NO_SESSIONS);

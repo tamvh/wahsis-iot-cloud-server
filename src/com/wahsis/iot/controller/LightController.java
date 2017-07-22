@@ -9,22 +9,14 @@ import com.wahsis.iot.common.AppConst;
 import com.wahsis.iot.common.CommonModel;
 import com.wahsis.iot.common.JsonParserUtil;
 import com.wahsis.iot.common.MessageType;
-import com.wahsis.iot.data.Gateway;
 import com.wahsis.iot.data.Light;
-import com.wahsis.iot.model.AreaModel;
 import com.wahsis.iot.model.LightModel;
-import com.wahsis.iot.model.GatewayModel;
 import com.wahsis.iot.task.AddLogTask;
-//import com.gbc.iot.model.
-import com.wahsis.iot.mqtt.MqttManager;
-import com.wahsis.iot.mqtt.data.IMqttMessage;
-import com.wahsis.iot.mqtt.data.MsgChangeState;
-import com.wahsis.iot.mqtt.data.MsgChangeStateGroup;
-import com.wahsis.iot.mqtt.data.TopicInfo;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.wahsis.iot.model.AreaModel;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -113,20 +105,7 @@ public class LightController extends HttpServlet {
 
                 Light light = new Light();
                 light = _gson.fromJson(jsonObject.get("light").getAsJsonObject(), Light.class);
-                int light_area_id = (int) light.getArea_id();
-                IMqttMessage<MsgChangeState> mqttMsg = new IMqttMessage<>();
-                MsgChangeState changeState = new MsgChangeState(light.getLight_code(), light_area_id);
-                mqttMsg.setMsgData(changeState);
-                mqttMsg.setErrCode(0);
-                mqttMsg.setMsg("");
-                mqttMsg.setMsgId(5);//5: update light's area_id
-
-                List<Gateway> listGateway = GatewayModel.getInstance().getGatewayList();
-
-                for (Gateway gateway : listGateway) {
-                    TopicInfo topic = new TopicInfo("vng-cloud", gateway.getGateway_code(), "switch_on_off", "request");
-                    MqttManager.getInstance().publish(topic, mqttMsg);
-                }
+                int light_area_id = (int)light.getArea_id();
 
                 content = CommonModel.FormatResponse(0, "", "light", light);
             }
@@ -139,58 +118,8 @@ public class LightController extends HttpServlet {
     }
 
     public String switchOnOffArea(String data) {
-
-        String content;
-        int ret = -1;
-
-        try {
-            JsonObject jsonObject = JsonParserUtil.parseJsonObject(data);
-            if (jsonObject == null) {
-                content = CommonModel.FormatResponse(ret, "Invalid parameter");
-            } else {
-                int area_id = jsonObject.get("area_id").getAsInt();
-                int on_off = jsonObject.get("on_off").getAsInt();
-                int brightness = AreaModel.getInstance().getBrightnessArea(area_id);
-
-                if (brightness >= 0) {
-                    IMqttMessage<MsgChangeStateGroup> mqttMsg = new IMqttMessage<>();
-                    if (on_off == 0) {
-                        brightness = 0;
-                    } else {
-                        if (brightness == 0) {
-                            brightness = 50;
-                        }
-                    }
-                    //-----public msg to mqtt chanel-----
-                    MsgChangeStateGroup changeStateGroup = new MsgChangeStateGroup(area_id, brightness);
-                    mqttMsg.setMsgData(changeStateGroup);
-                    mqttMsg.setErrCode(0);
-                    mqttMsg.setMsg("");
-                    mqttMsg.setMsgId(4);
-
-                    List<Gateway> listGateway = GatewayModel.getInstance().getGatewayList();
-
-                    for (Gateway gateway : listGateway) {
-                        TopicInfo topic = new TopicInfo("wahsis-cloud", gateway.getGateway_code(), "switch_on_off", "request");
-                        MqttManager.getInstance().publish(topic, mqttMsg);
-                    }
-                    
-                    Map mapdata = new HashMap();
-                    mapdata.put("area_id", area_id);
-                    mapdata.put("brightness", brightness);
-                    mapdata.put("on_off", on_off);
-                    AddLogTask.getInstance().addSwitchLightGroupMessage(mapdata);
-                    //----- end public msg to mqtt chanel-----
-                    
-                    content = CommonModel.FormatResponse(0, "", "brightness", brightness);
-                } else {
-                    content = CommonModel.FormatResponse(-1, "");
-                }
-            }
-        } catch (Exception ex) {
-            logger.error(getClass().getSimpleName() + ".switchOnOff: " + ex.getMessage(), ex);
-            content = CommonModel.FormatResponse(ret, ex.getMessage());
-        }
+        String content = null;
+       
 
         return content;
     }
@@ -210,7 +139,6 @@ public class LightController extends HttpServlet {
                 light = _gson.fromJson(jsonObject.get("light").getAsJsonObject(), Light.class);
                 int brightness = LightModel.getInstance().getBrightness(light.getLight_code());
                 if (brightness >= 0) {
-                    IMqttMessage<MsgChangeState> mqttMsg = new IMqttMessage<>();
                     if (light.getOn_off() == 0) {
                         brightness = 0;
                     } else {
@@ -218,20 +146,7 @@ public class LightController extends HttpServlet {
                             brightness = 50;
                         }
                     }
-
-                    //-----public msg to mqtt chanel-----
-                    MsgChangeState changeState = new MsgChangeState(light.getLight_code(), brightness);
-                    mqttMsg.setMsgData(changeState);
-                    mqttMsg.setErrCode(0);
-                    mqttMsg.setMsg("");
-                    mqttMsg.setMsgId(3);
-
-                    List<Gateway> listGateway = GatewayModel.getInstance().getGatewayList();
-                    for (Gateway gateway : listGateway) {
-                        TopicInfo topic = new TopicInfo("wahsis-cloud", gateway.getGateway_code(), "switch_on_off", "request");
-                        MqttManager.getInstance().publish(topic, mqttMsg);
-                    }
-                    //----- end public msg to mqtt chanel-----
+                    // push data to crestrol cpu
 
                     light.setBrightness(brightness);
                     content = CommonModel.FormatResponse(0, "", "light", light);
@@ -264,21 +179,7 @@ public class LightController extends HttpServlet {
                 Light light = new Light();
                 light = _gson.fromJson(jsonObject.get("light").getAsJsonObject(), Light.class);
 
-                //-----public msg to mqtt chanel-----
-                IMqttMessage<MsgChangeState> mqttMsg = new IMqttMessage<>();
-                MsgChangeState changeState = new MsgChangeState(light.getLight_code(), light.getBrightness());
-                mqttMsg.setMsgData(changeState);
-                mqttMsg.setErrCode(0);
-                mqttMsg.setMsg("");
-                mqttMsg.setMsgId(3);
-
-                List<Gateway> listGateway = GatewayModel.getInstance().getGatewayList();
-
-                for (Gateway gateway : listGateway) {
-                    TopicInfo topic = new TopicInfo("wahsis-cloud", gateway.getGateway_code(), "switch_on_off", "request");
-                    MqttManager.getInstance().publish(topic, mqttMsg);
-                }
-                //----- end public msg to mqtt chanel-----
+                // push data to crestrol cpu
 
                 content = CommonModel.FormatResponse(0, "", "light", light);
 
@@ -305,23 +206,7 @@ public class LightController extends HttpServlet {
                 int area_id = jsonObject.get("area_id").getAsInt();
                 int brightness = jsonObject.get("brightness").getAsInt();
 
-                IMqttMessage<MsgChangeStateGroup> mqttMsg = new IMqttMessage<>();
-                MsgChangeStateGroup changeState = new MsgChangeStateGroup(area_id, brightness);
-                mqttMsg.setMsgData(changeState);
-                mqttMsg.setErrCode(0);
-                mqttMsg.setMsg("");
-                mqttMsg.setMsgId(4);//4: update brightness for group
-
-                List<Gateway> listGateway = GatewayModel.getInstance().getGatewayList();
-                //listGateway.forEach((gateway) -> {
-                //    TopicInfo topic = new TopicInfo("vng-cloud", gateway.getGateway_code(), "change_state", "request");
-                //    MqttManager.getInstance().publish(topic, mqttMsg);
-                //});
-
-                for (Gateway gateway : listGateway) {
-                    TopicInfo topic = new TopicInfo("vng-cloud", gateway.getGateway_code(), "switch_on_off", "request");
-                    MqttManager.getInstance().publish(topic, mqttMsg);
-                }
+                // push data to crestrol cpu
 
                 content = CommonModel.FormatResponse(0, "", "brightness", brightness);
                 Map mapdata = new HashMap();
