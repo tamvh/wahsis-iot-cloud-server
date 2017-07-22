@@ -5,10 +5,12 @@
  */
 package com.wahsis.iot.model;
 
+import com.wahsis.iot.common.CommonService;
 import com.wahsis.iot.common.DefinedName;
 import com.wahsis.iot.data.Light;
 import com.wahsis.iot.database.MySqlFactory;
 import com.wahsis.iot.database.MsSqlFactory;
+import com.wahsis.iot.database.SQLConnFactory;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -293,6 +295,63 @@ public class LightModel {
             MySqlFactory.safeClose(connection);
         }
 
+        return ret;
+    }
+    public int updateOnOffByID(String company_id, Light light) {
+        Connection connection = null;
+        ResultSet rs = null;
+        PreparedStatement cs = null;
+        int ret = -1;
+        try {
+            int brightness = 0;
+            // light type: 0(dim), 1(onoff)
+            if (light.getIsActiveBrightness() == 0) {
+                if (light.getOn_off()== 0) {
+                    brightness = 0;
+                } else {
+                    brightness = 100;
+                }
+            } else {
+                brightness = light.getBrightness();
+            }
+            connection = SQLConnFactory.getConnection(company_id);
+            cs = connection.prepareStatement("SET NOCOUNT ON ; \n "
+                    + " update " + CommonService.getTableName(company_id, "room_area_light") + " \n "
+                    + " set [on_off] = ? , [brightness] = ? \n "
+                    + " where light_code = ? ; \n  "
+                    + " SELECT 1 as result; \n "
+                    + " select top 1 l.* \n "
+                    + " from " + CommonService.getTableName(company_id, "room_area_light") + " as l \n "
+                    + " where l.light_code = ? "
+                    + "");
+            int count = 1;
+            cs.setInt(count++, light.getOn_off());
+            cs.setInt(count++, brightness);
+            cs.setString(count++, light.getLight_code());
+            cs.setString(count++, light.getLight_code());
+            boolean kq = cs.execute();
+            if (kq) {
+                rs = cs.getResultSet();
+                if (rs.next()) {
+                    if (rs.getLong(1) > 0 && cs.getMoreResults()) {
+                        rs = cs.getResultSet();
+                        if (rs.next()) {
+                            light.setLight_id(rs.getLong("light_id"));
+                            light.setLight_code(rs.getString("light_code"));
+                            light.setOn_off(rs.getInt("on_off"));
+                            light.setBrightness(rs.getInt("brightness"));
+                        }
+                        ret = 0;
+                    }
+                }
+            }
+        } catch (SQLException ex) {
+            logger.error("RoomAreaLightModelSQL.updateOnOffByID : " + ex.getMessage(), ex);
+        } finally {
+            SQLConnFactory.safeClose(rs);
+            SQLConnFactory.safeClose(cs);
+            SQLConnFactory.safeClose(connection);
+        }
         return ret;
     }
 }

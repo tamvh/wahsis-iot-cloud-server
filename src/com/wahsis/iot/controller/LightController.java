@@ -7,6 +7,7 @@ package com.wahsis.iot.controller;
 
 import com.wahsis.iot.common.AppConst;
 import com.wahsis.iot.common.CommonModel;
+import com.wahsis.iot.common.CommonService;
 import com.wahsis.iot.common.JsonParserUtil;
 import com.wahsis.iot.common.MessageType;
 import com.wahsis.iot.data.Light;
@@ -16,8 +17,13 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.wahsis.iot.database.SQLConnFactory;
 import com.wahsis.iot.model.AreaModel;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -125,7 +131,6 @@ public class LightController extends HttpServlet {
     }
 
     public String switchOnOff(String data) {
-
         String content = null;
         int ret = -1;
 
@@ -134,29 +139,26 @@ public class LightController extends HttpServlet {
             if (jsonObject == null) {
                 content = CommonModel.FormatResponse(ret, "Invalid parameter");
             } else {
-
+                String company_id = null;
                 Light light = new Light();
                 light = _gson.fromJson(jsonObject.get("light").getAsJsonObject(), Light.class);
-                int brightness = LightModel.getInstance().getBrightness(light.getLight_code());
-                if (brightness >= 0) {
-                    if (light.getOn_off() == 0) {
-                        brightness = 0;
-                    } else {
-                        if (brightness == 0) {
-                            brightness = 50;
-                        }
-                    }
-                    // push data to crestrol cpu
-                    //
-
-                    light.setBrightness(brightness);
-                    content = CommonModel.FormatResponse(0, "", "light", light);
-
-                    AddLogTask.getInstance().addSwitchLightMessage(light);
-                } else {
-                    content = CommonModel.FormatResponse(-1, "");
+                if(jsonObject.equals("company_id")) {
+                    company_id = jsonObject.get("company_id").toString();
                 }
-
+                
+                if(light!= null && !company_id.isEmpty()) {
+                    ret = LightModel.getInstance().updateOnOffByID(company_id, light);
+//                    AddLogTask.getInstance().addSwitchLightMessage(light);
+                }
+                else {
+                    content = CommonModel.FormatResponse(ret, "Invalid parameter");
+                }
+                if(ret == 0) {
+                    content = CommonModel.FormatResponse(ret, "switch on off success");
+                } else {
+                    content = CommonModel.FormatResponse(ret, "switch on off faile");
+                }
+                 
             }
         } catch (Exception ex) {
             logger.error(getClass().getSimpleName() + ".switchOnOff: " + ex.getMessage(), ex);
@@ -384,4 +386,5 @@ public class LightController extends HttpServlet {
 
         return content;
     }
+    
 }
