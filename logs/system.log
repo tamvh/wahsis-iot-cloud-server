@@ -558,3 +558,49 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name 'room_area_
 2017-07-22 08:45:36  INFO ContextHandler:864 - Stopped o.e.j.s.ServletContextHandler@1b9116c0{/,null,UNAVAILABLE}
 2017-07-22 08:45:36  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@5dd14ad0{/cloud/ntf,null,UNAVAILABLE}
 2017-07-22 08:45:36  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@19f65e85{/static,null,UNAVAILABLE}
+2017-07-22 10:43:11  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-22 10:43:18  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-22 10:43:19 ERROR LightModel:94 - LightModel.loadLight: Invalid object name 'room_area_light'.
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name 'room_area_light'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:216)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1515)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:404)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:350)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:5696)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1715)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:180)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:155)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.executeQuery(SQLServerPreparedStatement.java:285)
+	at snaq.db.CachedPreparedStatement.executeQuery(CachedPreparedStatement.java:144)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:76)
+	at com.wahsis.iot.model.LightModel.loadLight(LightModel.java:105)
+	at com.wahsis.iot.main.ServiceDaemon.main(ServiceDaemon.java:26)
+2017-07-22 10:43:19  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-22 10:43:19  INFO log:178 - Logging initialized @8681ms
+2017-07-22 10:43:19  INFO WebServer:71 - Start server...
+2017-07-22 10:43:19  WARN ContextHandler:1324 - o.e.j.s.h.ContextHandler@19c05c4e{/,null,null} contextPath ends with /*
+2017-07-22 10:43:19  INFO Server:301 - jetty-9.1.5.v20140505
+2017-07-22 10:43:19  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@6542929{/static,null,AVAILABLE}
+2017-07-22 10:43:19  INFO ContextHandler:747 - Started o.e.j.s.h.ContextHandler@19c05c4e{/cloud/ntf,null,AVAILABLE}
+2017-07-22 10:43:19  INFO ContextHandler:747 - Started o.e.j.s.ServletContextHandler@6f6f1bf6{/,null,AVAILABLE}
+2017-07-22 10:43:19  INFO ServerConnector:266 - Started ServerConnector@7be17bf6{HTTP/1.1}{0.0.0.0:8021}
+2017-07-22 10:43:19  INFO ServerConnector:266 - Started ServerConnector@6a378b65{HTTP/1.1}{0.0.0.0:9021}
+2017-07-22 10:43:19  INFO Server:350 - Started @9456ms
+2017-07-22 10:43:24  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-22 10:43:24  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-22 10:43:29  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-22 10:43:29  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-22 10:43:34  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-22 10:43:34  INFO pos_live_pool:839 - pos_live_pool: Getting connection (user/password): jdbc:sqlserver://10.9.11.11:1433;databaseName=wahsis_live;user=wahsis_pos_user;password=WahSiS@123456
+2017-07-22 10:43:39  INFO pos_live_pool:839 - pos_live_pool: Created a new connection
+2017-07-22 10:46:19  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-22 10:46:24  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-22 10:46:29  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-22 10:46:34  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-22 10:46:39  INFO pos_live_pool:839 - pos_live_pool: Destroyed connection
+2017-07-22 12:01:10  INFO ServiceDaemon:35 - Shutdown thread before webserver getinstance
+2017-07-22 12:01:10  INFO ServerConnector:303 - Stopped ServerConnector@7be17bf6{HTTP/1.1}{0.0.0.0:8021}
+2017-07-22 12:01:10  INFO ServerConnector:303 - Stopped ServerConnector@6a378b65{HTTP/1.1}{0.0.0.0:9021}
+2017-07-22 12:01:10  INFO ContextHandler:864 - Stopped o.e.j.s.ServletContextHandler@6f6f1bf6{/,null,UNAVAILABLE}
+2017-07-22 12:01:10  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@19c05c4e{/cloud/ntf,null,UNAVAILABLE}
+2017-07-22 12:01:10  INFO ContextHandler:864 - Stopped o.e.j.s.h.ContextHandler@6542929{/static,null,UNAVAILABLE}

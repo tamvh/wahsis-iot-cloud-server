@@ -147,6 +147,7 @@ public class LightController extends HttpServlet {
                         }
                     }
                     // push data to crestrol cpu
+                    //
 
                     light.setBrightness(brightness);
                     content = CommonModel.FormatResponse(0, "", "light", light);

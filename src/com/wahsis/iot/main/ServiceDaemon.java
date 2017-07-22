@@ -6,7 +6,6 @@
 package com.wahsis.iot.main;
 
 import com.wahsis.iot.common.Config;
-import com.wahsis.iot.model.LightModel;
 import com.wahsis.iot.task.AddLogTask;
 import org.apache.log4j.Logger;
 
@@ -23,7 +22,6 @@ public class ServiceDaemon {
     public static void main(String[] args) {
         try {
             Config.init(DEFAULT_CONFIGURATION_FILE);
-            LightModel.getInstance().loadLight();
             webServer = WebServer.getInstance();
             new Thread(webServer).start();
             AddLogTask.getInstance().start();
