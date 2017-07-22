@@ -20,7 +20,15 @@ public class Light {
     private int status;
     private int brightness;
     private int active;
+    private int is_active_brightness;
     
+    public int getIsActiveBrightness() {
+        return is_active_brightness;
+    }
+
+    public void setIsActiveBrightness(int value) {
+        is_active_brightness = value;
+    }
     public int getActive() {
         return active;
     }
